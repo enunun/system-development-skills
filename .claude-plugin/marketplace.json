@@ -1,0 +1,14 @@
+{
+  "name": "system-development-skills",
+  "owner": {
+    "name": "enunun"
+  },
+  "plugins": [
+    {
+      "name": "system-development-skills",
+      "source": "./",
+      "description": "Reusable Claude Code skills for general software development workflows, shared across projects.",
+      "version": "0.1.0"
+    }
+  ]
+}
