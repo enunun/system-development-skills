@@ -7,7 +7,7 @@
     {
       "name": "system-development-skills",
       "source": "./",
-      "description": "Reusable Claude Code skills for general software development workflows, shared across projects.",
+      "description": "Reusable Claude Code skills for software development workflows and for building test-driven hands-on courses, shared across projects.",
       "version": "0.1.0"
     }
   ]
