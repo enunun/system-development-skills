@@ -27,6 +27,9 @@
 }
 ```
 
+設定を追記しただけでは，スキルは使えるようにならない．
+Claude Codeの「Manage plugins」メニューを開き，`system-development-skills`プラグインを明示的に追加する．
+
 有効化されたスキルは，`system-development-skills:finalize-artifacts`のように，`プラグイン名:スキル名`の形で呼び出される．
 
 ## スキルを追加する
