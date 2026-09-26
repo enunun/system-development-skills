@@ -71,11 +71,15 @@ An example given to explain a preference leaks into the deliverable, or the deli
 
 References to how the work was carried out.
 
+<!-- textlint-disable no-todo -->
+
 | Before | After |
 | --- | --- |
 | Drafted by an AI assistant from the instructions above. | (Delete unless the user or a policy requires disclosure.) |
 | # TODO: confirm with the user | (Resolve it, or delete it.) |
 | 調べたところ、次のことが分かりました。 | (State the findings directly.) |
+
+<!-- textlint-enable no-todo -->
 
 ## 8. Defensive or apologetic hedging
 

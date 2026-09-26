@@ -1,0 +1,40 @@
+plugins:
+  '@textlint/markdown': true
+
+# <!-- textlint-disable rule-name -->と<!-- textlint-enable rule-name -->で囲んだ範囲は，そのルールで検査しない．
+filters:
+  comments: true
+
+rules:
+  # 技術用語の表記(GitHub，JavaScript，Markdownなど)をそろえる．
+  terminology:
+    exclude:
+      # README，TODOは大文字で書く．
+      - 'readme(s)?'
+      - 'to-?do(s)?(?=[ ,.])'
+
+  # 指示をぼかす表現を見つける．
+  # 受動態，弱める語(only，usuallyなど)，-ly副詞，冗長な語は，手順の文では正当に使うことが多いので検査しない．
+  write-good:
+    passive: false
+    weasel: false
+    adverb: false
+    tooWordy: false
+
+  common-misspellings: true
+
+  # 文頭と箇条書きの先頭を大文字にする．見出しはスキル名(小文字)をそのまま使うので検査しない．
+  en-capitalization:
+    allowHeading: false
+
+  # 1文の読点を4つまでにする．
+  max-comma: true
+
+  no-todo: true
+  no-empty-section: true
+
+  # 相対リンク(references/など)の参照先があるかを確かめる．外部URLはネットワークに依存するので検査しない．
+  no-dead-link:
+    ignore:
+      - 'http://**'
+      - 'https://**'

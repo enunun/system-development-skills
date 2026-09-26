@@ -1,0 +1,24 @@
+{
+	"config": {
+		"default": true,
+		// 1文(英文は1段落)を1行に書くので，行の長さは制限しない．
+		"MD013": false,
+		// 別の節の下なら，同じ見出し(Examplesなど)を繰り返してよい．
+		"MD024": { "siblings_only": true },
+		// 記法を1種類にそろえる．
+		"MD003": { "style": "atx" },
+		"MD004": { "style": "dash" },
+		"MD029": { "style": "ordered" },
+		"MD035": { "style": "---" },
+		"MD046": { "style": "fenced" },
+		"MD048": { "style": "backtick" },
+		"MD049": { "style": "asterisk" },
+		"MD050": { "style": "asterisk" }
+	},
+	"customRules": [
+		"./.markdownlint-rules/skill-frontmatter.cjs"
+	],
+	"ignores": [
+		"**/node_modules/**"
+	]
+}

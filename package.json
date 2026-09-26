@@ -1,0 +1,29 @@
+{
+  "name": "system-development-skills",
+  "version": "1.0.0",
+  "description": "Linters for the skill files of system-development-skills",
+  "scripts": {
+    "lint:text": "git ls-files 'skills/**/*.md' -z | xargs -0 -r textlint",
+    "lint:markdown": "git ls-files 'skills/**/*.md' -z | xargs -0 -r markdownlint-cli2",
+    "lint": "pnpm run lint:text && pnpm run lint:markdown",
+    "fmt:text": "git ls-files 'skills/**/*.md' -z | xargs -0 -r textlint --fix",
+    "fmt:markdown": "git ls-files 'skills/**/*.md' -z | xargs -0 -r markdownlint-cli2 --fix",
+    "fmt": "pnpm run fmt:text && pnpm run fmt:markdown"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "markdownlint-cli2": "^0.23.3",
+    "textlint": "^15.8.0",
+    "textlint-filter-rule-comments": "^1.3.0",
+    "textlint-rule-common-misspellings": "^1.0.1",
+    "textlint-rule-en-capitalization": "^2.0.3",
+    "textlint-rule-max-comma": "^4.0.0",
+    "textlint-rule-no-dead-link": "^6.2.3",
+    "textlint-rule-no-empty-section": "^1.1.0",
+    "textlint-rule-no-todo": "^2.0.1",
+    "textlint-rule-terminology": "^5.2.16",
+    "textlint-rule-write-good": "^2.0.0",
+    "yaml": "^2.9.1"
+  },
+  "private": true
+}

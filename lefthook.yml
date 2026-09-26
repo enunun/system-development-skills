@@ -1,0 +1,16 @@
+# コミット時に，ステージしたスキルのMarkdownファイルを検査する．
+# リポジトリ全体に同じ設定で検査するには，mise run checkを実行する．
+pre-commit:
+  parallel: true
+  skip:
+    - merge
+    - rebase
+
+  commands:
+    textlint:
+      glob: "skills/**/*.md"
+      run: pnpm textlint {staged_files}
+
+    markdownlint:
+      glob: "skills/**/*.md"
+      run: pnpm markdownlint-cli2 {staged_files}

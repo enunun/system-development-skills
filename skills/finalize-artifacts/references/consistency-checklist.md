@@ -6,7 +6,7 @@ Repeated edits and partial rewrites leave seams. Read the whole artifact once, t
 
 - Is each concept called by one name throughout? (Not "workspace" in one place and "project folder" in another; not "ユーザー" and "利用者" mixed for the same role.)
 - Are abbreviations spelled out on first use and used the same way afterwards?
-- Do code identifiers, file names, and commands in the prose match the ones actually used in the code or config?
+- Do code identifiers, filenames, and commands in the prose match the ones actually used in the code or config?
 
 ## Voice and tone
 

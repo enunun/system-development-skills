@@ -30,4 +30,23 @@
 
 ## スキルを追加する
 
-`skills/<skill-name>/SKILL.md`を追加し，`.claude-plugin/marketplace.json`と`plugin.json`のdescriptionを必要に応じて更新する．
+スキルを追加するときは，`skills/<skill-name>/SKILL.md`を作り，「収録スキル」の一覧に1行足す．
+プラグインの扱う範囲が変わるときは，`.claude-plugin/marketplace.json`と`plugin.json`のdescriptionも書き換える．
+
+このリポジトリでは，`.claude/skills`を`skills/`へのシンボリックリンクにしている．
+スキルはプロジェクトのスキルとして，`finalize-artifacts`のような名前で読み込まれる．
+編集中のスキルを，pushする前にこのリポジトリの中で試せる．
+
+## 開発環境
+
+VSCodeのDev Containersで開く(「Reopen in Container」)．
+コンテナにはmise，rtk，lefthookが入っている．
+初回の起動時に`mise run setup`を実行し，依存パッケージとGitのフックを設定する．
+
+| コマンド | 内容 |
+| --- | --- |
+| `mise run lint` | スキルのMarkdown(`skills/`)をtextlintとmarkdownlintで検査する． |
+| `mise run fmt` | 自動で直せる指摘を直す． |
+| `mise run check` | すべての検査をまとめて実行する．変更のあとに実行する． |
+
+コミット時には，lefthookがステージしたスキルのMarkdownファイルを同じ設定で検査する．
