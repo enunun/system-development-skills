@@ -38,6 +38,7 @@ Propose options from [design-documents.md](design-documents.md) that match the l
 
 Propose defaults for the following and let the user confirm or change them:
 
+- The Dev Container the learner works in: the base image, the language runtime and every tool the course uses, including those that check the material, with pinned versions, and the editor extensions.
 - Test framework, build tool, formatter and linters.
 - Repository layout: where the exercise and solution packages of each Iteration live, how they are named, and how they are registered with the build tool.
 - Commands to build, test, run and start a REPL, and the single command that verifies the whole repository (such as `mise run check`).
@@ -49,6 +50,7 @@ The default layout is:
 
 ```text
 COURSE.md                       Course plan (for builders)
+.devcontainer/                  Dev Container the learner works in
 README.md                       Course overview and the list of Iterations (for learners)
 docs/ROADMAP.md                 Iterations: requirements, topics, design-document updates
 docs/tdd.md                     Test-driven development and how to write test lists
@@ -103,10 +105,11 @@ Save the agreed `docs/ROADMAP.md`.
 
 Set up what the Iterations share, following `COURSE.md`:
 
+- The Dev Container in `.devcontainer/`: `devcontainer.json` and, when the base image lacks tools, a Dockerfile or setup script that installs the pinned versions.
 - The build tool's workspace or project file, the formatter and linter configuration, and the verification command.
 - Diagram syntax checks and the design-to-code check script, if the plan includes them.
-- `README.md` for learners: what the course teaches and what it assumes. It also explains how to set up the environment and links to the roadmap and guides.
+- `README.md` for learners: what the course teaches and what it assumes, how to open the repository in the Dev Container, and the command that confirms the environment works. It links to the roadmap and guides.
 - `docs/tdd.md`: the Red → Green → Refactor cycle, how to write and order a test list, the split between unit and integration tests, and how to run the tests.
 - `docs/design.md`: the design-document guide described in [design-documents.md](design-documents.md).
 
-Run the verification command once to confirm that the empty repository passes. Then build Iteration 0 with [building-an-iteration.md](building-an-iteration.md).
+Build the Dev Container and run the verification command inside it once to confirm that the empty repository passes. Then build Iteration 0 with [building-an-iteration.md](building-an-iteration.md).

@@ -30,13 +30,14 @@ Decided with the user during course planning, never assumed:
 - **Who the learners are and what they learn**: prior experience, learning goals, the language or technology, and the language of the material.
 - **The subject**: the program the learner grows. Propose candidates that fit the audience and goals, and settle it through discussion.
 - **The design documents**: which documents to write, their notation, and how each one evolves across Iterations. See [references/design-documents.md](references/design-documents.md) for the options to propose.
-- **The development environment**: test framework, build tool, directory layout, commands, and the tool operations left to the learner.
+- **The development environment**: the contents of the Dev Container, the test and build tools, directory layout, commands, and the tool operations left to the learner.
 
 Fixed for every course:
 
 1. **Test-driven.** Every feature in every solution is built Red → Green → Refactor from a test list. The learner writes the test list from the requirements instead of being given a specification.
 2. **Iterative.** The program grows Iteration by Iteration. Each Iteration's exercise starts from the previous Iteration's solution, unchanged.
 3. **Design documents in every Iteration.** Every Iteration updates the design documents before implementing and reviews them against the implementation afterwards. The solution's design documents are the model answer and match the implementation.
+4. **Dev Container.** The learner works inside the course's Dev Container, which has every tool the course uses installed.
 
 ## Principles of the material
 
