@@ -38,7 +38,11 @@ Propose options from [design-documents.md](design-documents.md) that match the l
 
 Propose defaults for the following and let the user confirm or change them:
 
-- The Dev Container the learner works in: the base image, the language runtime and every tool the course uses, including those that check the material, with pinned versions, and the editor extensions.
+- The Dev Container the learner works in: the base image, the language runtime and every tool the course uses, including those that check the material, with pinned versions.
+- What else goes into the Dev Container for the learner's convenience. Include everything useful, not just what the build needs:
+  - Editor extensions for the stack: language support, linters and formatters, debuggers, and test explorers.
+  - Dev tools commonly used with each technology in the stack, such as local GUIs or admin consoles, emulators and CLIs. Run them as Dev Container services or install them as tools.
+  - A task with a description for every routine operation, including launching each of these tools, so that the task runner's list (such as `mise tasks`) shows everything the learner can run.
 - Test framework, build tool, formatter and linters.
 - Repository layout: where the exercise and solution packages of each Iteration live, how they are named, and how they are registered with the build tool.
 - Commands to build, test, run and start a REPL, and the single command that verifies the whole repository (such as `mise run check`).
@@ -105,7 +109,8 @@ Save the agreed `docs/ROADMAP.md`.
 
 Set up what the Iterations share, following `COURSE.md`:
 
-- The Dev Container in `.devcontainer/`: `devcontainer.json` and, when the base image lacks tools, a Dockerfile or setup script that installs the pinned versions.
+- The Dev Container in `.devcontainer/`: `devcontainer.json` with the agreed editor extensions and dev-tool services, and, when the base image lacks tools, a Dockerfile or setup script that installs the pinned versions.
+- The tasks agreed in section 4, each with a description.
 - The build tool's workspace or project file, the formatter and linter configuration, and the verification command.
 - Diagram syntax checks and the design-to-code check script, if the plan includes them.
 - `README.md` for learners: what the course teaches and what it assumes, how to open the repository in the Dev Container, and the command that confirms the environment works. It links to the roadmap and guides.
